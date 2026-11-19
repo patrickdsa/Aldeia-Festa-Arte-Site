@@ -93,7 +93,8 @@
   color: var(--ink);
 }
 
-.form-field input {
+.form-field input,
+.form-field select {
   width: 100%;
   min-height: 52px;
   border: 1px solid #17343b30;
@@ -104,7 +105,13 @@
   font: 14px var(--sans);
 }
 
-.form-field input:focus-visible {
+.form-field select {
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+.form-field input:focus-visible,
+.form-field select:focus-visible {
   outline: 2px solid var(--teal);
   outline-offset: 2px;
 }
