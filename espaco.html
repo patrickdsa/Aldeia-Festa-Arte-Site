@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#fffaf2">
+    <meta name="description" content="O espaço — Aldeia Festa e Arte, festas infantis em Coimbra.">
+    <title>O espaço — Aldeia Festa e Arte</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="brand-colors.css">
+  </head>
+  <body class="space-page">
+    <div class="color-bar">
+    </div>
+    <header class="wrap site-header">
+      <a class="brand" href="index.html" aria-label="Aldeia Festa e Arte, início">
+        <span class="brand-mark">A</span>
+        <span class="brand-name">Aldeia<small>Festa e Arte</small>
+        </span>
+      </a>
+      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNav">☰</button>
+      <nav class="nav" id="mainNav" aria-label="Navegação principal">
+        <a href="espaco.html" aria-current="page">O espaço</a>
+        <a href="como-funciona.html" >Como funciona</a>
+        <a href="contacto.html">Entre em contacto</a>
+      </nav>
+    </header>
+    <main>
+      <section class="wrap page-hero">
+        <div class="kicker">Um lugar à medida da imaginação</div>
+        <h1>Bem-vindos à Aldeia.</h1>
+        <p>Uma festa infantil em Coimbra, num espaço cheio de pequenos cenários para brincar, inventar e descobrir.</p>
+      </section>
+      <div class="wrap">
+        <img class="feature-photo" src="assets/imgs/aldeia5.jpg" alt="Vista das casas e zonas de brincadeira na Aldeia" fetchpriority="high">
+      </div>
+      <section class="wrap content-section two-col space-story">
+        <div class="text-col">
+          <div class="kicker">Brincar é descobrir</div>
+          <h2>Pequenos mundos, grandes histórias.</h2>
+          <p>A cozinha, o mini mercado e a oficina convidam a experimentar o faz de conta. Há espaço para criar histórias, partilhar a brincadeira e celebrar um dia especial.</p>
+          <ul class="feature-list">
+            <li>
+              <span class="icon" aria-hidden="true">⌂</span>
+              <div>
+                <strong>Cozinha e mercado</strong>
+                <span>Um cenário para inventar receitas, compras e conversas.</span>
+              </div>
+            </li>
+            <li>
+              <span class="icon" aria-hidden="true">✳</span>
+              <div>
+                <strong>Oficina de brincar</strong>
+                <span>Um cantinho para experimentar e dar asas à imaginação.</span>
+              </div>
+            </li>
+            <li>
+              <span class="icon" aria-hidden="true">♡</span>
+              <div>
+                <strong>Zona de convívio</strong>
+                <span>Mesas e lugares para estar junto durante a celebração.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <img src="assets/imgs/aldeia2.jpg" alt="Zona de mesas e convívio na Aldeia" loading="lazy">
+      </section>
+
+      <section class="wrap space-gallery" aria-labelledby="space-gallery-title">
+        <div class="space-gallery-heading">
+          <div>
+            <div class="kicker">Um olhar pela Aldeia</div>
+            <h2 id="space-gallery-title">Cada cantinho tem uma história.</h2>
+          </div>
+        </div>
+        <div class="space-slider" data-slider role="region" aria-label="Fotografias do espaço Aldeia" aria-roledescription="apresentação de fotografias">
+          <div class="space-slider-stage">
+            <figure class="space-slide is-active" role="group" aria-roledescription="slide" aria-label="1 de 3">
+              <img src="assets/imgs/aldeia1.jpg" alt="Cozinha de brincar, mini mercado e oficina" loading="lazy">
+              <figcaption>Cozinha, mercado e oficina</figcaption>
+            </figure>
+            <figure class="space-slide" role="group" aria-roledescription="slide" aria-label="2 de 3" aria-hidden="true" hidden>
+              <img src="assets/imgs/aldeia4.jpg" alt="Vista das casas e cenários de brincadeira" loading="lazy">
+              <figcaption>Pequenos mundos para descobrir</figcaption>
+            </figure>
+            <figure class="space-slide" role="group" aria-roledescription="slide" aria-label="3 de 3" aria-hidden="true" hidden>
+              <img src="assets/imgs/aldeia6-blurred.png" alt="Crianças a brincar na cozinha de faz de conta, com os rostos desfocados" loading="lazy">
+              <figcaption>Uma cozinha para inventar</figcaption>
+            </figure>
+          </div>
+          <div class="space-slider-controls">
+            <span class="space-slider-count" data-slider-count aria-live="polite">1 / 3</span>
+            <div class="space-slider-buttons">
+              <button type="button" data-slider-prev aria-label="Fotografia anterior">←</button>
+              <button type="button" data-slider-next aria-label="Fotografia seguinte">→</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <div class="footer-brand">Aldeia Festa e Arte</div>
+        <p>Festas infantis · Coimbra, Portugal</p>
+        <a class="footer-home" href="index.html">Voltar ao início ↑</a>
+      </div>
+    </footer>
+    <script src="script.js" defer>
+    </script>
+  </body>
+</html>
