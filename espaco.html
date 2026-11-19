@@ -1,11 +1,12 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="pt-PT">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="#fffaf2">
-    <meta name="description" content="O espaço — Aldeia Festa e Arte, festas infantis em Coimbra.">
-    <title>O espaço — Aldeia Festa e Arte</title>
+    <link rel="icon" type="image/svg+xml" href="assets/imgs/favicon.svg">
+    <meta name="description" content="O espaço da Aldeia Festa e Arte: festas, brincadeiras e cenários para descobrir.">
+    <title>Aldeia Festa e Arte</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="brand-colors.css">
   </head>
@@ -19,9 +20,7 @@
     </div>
     <header class="wrap site-header">
       <a class="brand" href="index.html" aria-label="Aldeia Festa e Arte, início">
-        <span class="brand-mark">A</span>
-        <span class="brand-name">Aldeia<small>Festa e Arte</small>
-        </span>
+        <img class="brand-logo" src="assets/imgs/logoaldeia.png" alt="">
       </a>
       <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNav">☰</button>
       <nav class="nav" id="mainNav" aria-label="Navegação principal">
@@ -31,93 +30,97 @@
       </nav>
     </header>
     <main>
-      <section class="wrap page-hero">
-        <div class="kicker">Um lugar à medida da imaginação</div>
-        <h1>Bem-vindos à Aldeia.</h1>
-        <p>Uma festa infantil em Coimbra, num espaço cheio de pequenos cenários para brincar, inventar e descobrir.</p>
-      </section>
-      <div class="wrap">
-        <img class="feature-photo" src="assets/imgs/aldeia5.jpg" alt="Vista das casas e zonas de brincadeira na Aldeia" fetchpriority="high">
-      </div>
-      <section class="wrap content-section two-col space-story">
-        <div class="text-col">
-          <div class="kicker">Brincar é descobrir</div>
-          <h2>Pequenos mundos, grandes histórias.</h2>
-          <p>A cozinha, o mini mercado e a oficina convidam a experimentar o faz de conta. Há espaço para criar histórias, partilhar a brincadeira e celebrar um dia especial.</p>
-          <ul class="feature-list">
-            <li>
-              <span class="icon" aria-hidden="true">⌂</span>
-              <div>
-                <strong>Cozinha e mercado</strong>
-                <span>Um cenário para inventar receitas, compras e conversas.</span>
-              </div>
-            </li>
-            <li>
-              <span class="icon" aria-hidden="true">✳</span>
-              <div>
-                <strong>Oficina de brincar</strong>
-                <span>Um cantinho para experimentar e dar asas à imaginação.</span>
-              </div>
-            </li>
-            <li>
-              <span class="icon" aria-hidden="true">♡</span>
-              <div>
-                <strong>Zona de convívio</strong>
-                <span>Mesas e lugares para estar junto durante a celebração.</span>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <img src="assets/imgs/aldeia2.jpg" alt="Zona de mesas e convívio na Aldeia" loading="lazy">
+      <section class="wrap space-intro" aria-labelledby="space-intro-title">
+        <div class="kicker">Um espaço para celebrar</div>
+        <h1 id="space-intro-title">Conheça a Aldeia</h1>
+        <p>Um lugar pensado para dar asas à imaginação, com brincadeiras e momentos especiais para toda a família.</p>
       </section>
       <section class="wrap space-gallery" aria-labelledby="space-gallery-title">
         <div class="space-gallery-heading">
           <div>
-            <div class="kicker">Um olhar pela Aldeia</div>
             <h2 id="space-gallery-title">Cada cantinho tem uma história.</h2>
           </div>
         </div>
         <div class="space-gallery-layout">
-        <div class="space-slider" data-slider role="region" aria-label="Fotografias do espaço Aldeia" aria-roledescription="apresentação de fotografias">
-          <div class="space-slider-stage">
-            <figure class="space-slide is-active" role="group" aria-roledescription="slide" aria-label="1 de 3">
-              <img src="assets/imgs/aldeia1.jpg" alt="Cozinha de brincar, mini mercado e oficina" loading="lazy">
-              <figcaption>Cozinha, mercado e oficina</figcaption>
+          <div class="space-slider" data-slider role="region" aria-label="Fotografias do espaço Aldeia" aria-roledescription="apresentação de fotografias">
+            <div class="space-slider-stage">
+            <figure class="space-slide is-active" role="group" aria-roledescription="slide" aria-label="1 de 8">
+              <img src="assets/imgs/zona-da-quinta.JPG" alt="Quinta de brincar com árvores, vedação branca e relva" loading="lazy">
+              <figcaption>A quinta de brincar</figcaption>
             </figure>
-            <figure class="space-slide" role="group" aria-roledescription="slide" aria-label="2 de 3" aria-hidden="true" hidden>
-              <img src="assets/imgs/aldeia4.jpg" alt="Vista das casas e cenários de brincadeira" loading="lazy">
-              <figcaption>Pequenos mundos para descobrir</figcaption>
+            <figure class="space-slide" role="group" aria-roledescription="slide" aria-label="2 de 8" aria-hidden="true" hidden>
+              <img src="assets/imgs/cantinho-criatividade.jpg" alt="Mesa de atividades criativas com cadeiras coloridas" loading="lazy">
+              <figcaption>Um cantinho para criar</figcaption>
             </figure>
-            <figure class="space-slide" role="group" aria-roledescription="slide" aria-label="3 de 3" aria-hidden="true" hidden>
-              <img src="assets/imgs/aldeia6-blurred.png" alt="Crianças a brincar na cozinha de faz de conta, com os rostos desfocados" loading="lazy">
-              <figcaption>Uma cozinha para inventar</figcaption>
+            <figure class="space-slide" role="group" aria-roledescription="slide" aria-label="3 de 8" aria-hidden="true" hidden>
+              <img src="assets/imgs/brincadeira-hospital.jpg" alt="Área de brincadeira de faz de conta do hospital" loading="lazy">
+              <figcaption>O cantinho do hospital</figcaption>
             </figure>
-          </div>
-          <div class="space-slider-controls">
-            <span class="space-slider-count" data-slider-count aria-live="polite">1 / 3</span>
-            <div class="space-slider-buttons">
-              <button type="button" data-slider-prev aria-label="Fotografia anterior">←</button>
-              <button type="button" data-slider-next aria-label="Fotografia seguinte">→</button>
+            <figure class="space-slide" role="group" aria-roledescription="slide" aria-label="4 de 8" aria-hidden="true" hidden>
+              <img src="assets/imgs/zona-jogos-digitais.jpg" alt="Zona de jogos digitais da Aldeia" loading="lazy">
+              <figcaption>Jogos para partilhar</figcaption>
+            </figure>
+            <figure class="space-slide" role="group" aria-roledescription="slide" aria-label="5 de 8" aria-hidden="true" hidden>
+              <img src="assets/imgs/cesto-basquetebol.jpg" alt="Cesto de basquetebol para crianças" loading="lazy">
+              <figcaption>Desafios de basquetebol</figcaption>
+            </figure>
+            <figure class="space-slide" role="group" aria-roledescription="slide" aria-label="6 de 8" aria-hidden="true" hidden>
+              <img src="assets/imgs/trampolim.jpg" alt="Trampolim protegido por rede de segurança" loading="lazy">
+              <figcaption>Saltos no trampolim</figcaption>
+            </figure>
+            <figure class="space-slide" role="group" aria-roledescription="slide" aria-label="7 de 8" aria-hidden="true" hidden>
+              <img src="assets/imgs/sala-de-refeicoes.JPG" alt="Sala de refeições com mesas e cadeiras" loading="lazy">
+              <figcaption>Um espaço para estar à mesa</figcaption>
+            </figure>
+            <figure class="space-slide" role="group" aria-roledescription="slide" aria-label="8 de 8" aria-hidden="true" hidden>
+              <img src="assets/imgs/mesa-de-air-hockey.JPG" alt="Mesa de air hockey" loading="lazy">
+              <figcaption>Uma partida de air hockey</figcaption>
+            </figure>
+            </div>
+            <div class="space-slider-controls">
+              <span class="space-slider-count" data-slider-count aria-live="polite">1 / 8</span>
+              <div class="space-slider-buttons">
+                <button type="button" data-slider-prev aria-label="Fotografia anterior">←</button>
+                <button type="button" data-slider-next aria-label="Fotografia seguinte">→</button>
+              </div>
             </div>
           </div>
+          <aside class="page-mascot" aria-label="Mensagem dos personagens da Aldeia">
+            <figure class="page-mascot-art">
+              <img src="assets/imgs/personagens-aldeia.png" alt="Duas crianças, personagens da Aldeia" loading="lazy">
+            </figure>
+            <p class="page-mascot-speech">Vamos descobrir cada cantinho da Aldeia?</p>
+          </aside>
         </div>
-        <aside class="page-mascot" aria-label="Mensagem dos personagens da Aldeia">
-          <figure class="page-mascot-art">
-            <img src="assets/imgs/personagens-aldeia.png" alt="Duas crianças, personagens da Aldeia" loading="lazy">
-          </figure>
-          <p class="page-mascot-speech">Vamos descobrir cada cantinho da Aldeia?</p>
-        </aside>
+      </section>
+      <section class="wrap space-location" aria-labelledby="space-location-title">
+        <div class="space-location-copy">
+          <div class="kicker">A nossa morada</div>
+          <h2 id="space-location-title">Como chegar.</h2>
+          <address>Av. Elísio de Moura 357, loja 4<br>3030-183 Coimbra</address>
+          <a class="space-location-link" href="https://www.google.com/maps/place//data=!4m2!3m1!1s0xd22f97081789255:0xbe19085c9d4c660f?sa=X&amp;ved=1t:8290&amp;ictx=111" target="_blank" rel="noopener">Abrir no Google Maps ↗</a>
+        </div>
+        <div class="space-map-frame">
+          <iframe
+            src="https://www.google.com/maps?q=Av.+El%C3%ADsio+de+Moura+357+loja+4,+3030-183+Coimbra&amp;output=embed"
+            title="Mapa da Aldeia Festa e Arte, na Avenida Elísio de Moura, em Coimbra"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
         </div>
       </section>
     </main>
     <footer class="site-footer">
       <div class="wrap footer-inner">
         <div class="footer-brand">Aldeia Festa e Arte</div>
-        <p>Festas infantis · Coimbra, Portugal</p>
-        <a class="footer-home" href="index.html">Voltar ao início ↑</a>
+        <address class="footer-address"><span class="footer-address-label">Visite-nos</span><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0xd22f97081789255:0xbe19085c9d4c660f?sa=X&amp;ved=1t:8290&amp;ictx=111" target="_blank" rel="noopener">Av. Elísio de Moura 357, loja 4<br>3030-183 Coimbra</a></address>
+        <a class="footer-home" href="index.html">Voltar ao início</a>
+        <a class="footer-complaints" href="https://www.livroreclamacoes.pt/Inicio/" target="_blank" rel="noopener">Livro de Reclamações</a>
       </div>
     </footer>
     <script src="script.js" defer>
     </script>
   </body>
 </html>
+

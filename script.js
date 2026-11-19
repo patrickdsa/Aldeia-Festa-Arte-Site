@@ -24,10 +24,24 @@ if (bookingForm) {
   // Configure este endereço com o email de reservas da Aldeia.
   const contactEmail = "aldeia.coimbra@gmail.com";
   const dateInput = bookingForm.querySelector('[name="data"]');
+  const phonePrefixInput = bookingForm.querySelector('[name="indicativo"]');
+  const phoneInput = bookingForm.querySelector('[name="telefone"]');
   const status = document.querySelector("#form-status");
 
   if (dateInput) {
     dateInput.min = new Date().toISOString().slice(0, 10);
+  }
+
+  if (phoneInput) {
+    phoneInput.addEventListener("input", () => {
+      phoneInput.value = phoneInput.value.replace(/\D/g, "").slice(0, 15);
+    });
+  }
+
+  if (phonePrefixInput) {
+    phonePrefixInput.addEventListener("input", () => {
+      phonePrefixInput.value = phonePrefixInput.value.replace(/\D/g, "").slice(0, 4);
+    });
   }
 
   bookingForm.addEventListener("submit", (event) => {
@@ -44,10 +58,15 @@ if (bookingForm) {
     const body = [
       "Olá, gostaria de saber a disponibilidade para a minha festa.",
       "",
-      `Data que pretende reservar: ${date}`,
       `Nome: ${fields.get("nome")}`,
+      `Contacto telefónico: +${fields.get("indicativo")} ${fields.get("telefone")}`,
+      `Nome do aniversariante: ${fields.get("aniversariante")}`,
+      `Data que pretende reservar: ${date}`,
       `Horário: ${fields.get("horario")}`,
-      `Contacto telefónico: ${fields.get("telefone")}`,
+      `Tipo de festa: ${fields.get("tipo_festa")}`,
+      `Lanche: ${fields.getAll("lanche").join(", ") || "Não indicado"}`,
+      `Decoração: ${fields.get("decoracao")}`,
+      `Extras: ${fields.get("extras") || "Nenhum"}`,
     ].join("\n");
 
     window.location.href = `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;

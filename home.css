@@ -403,6 +403,15 @@
   color: #237d87;
 }
 
+.home-page .footer-address-label {
+  color: #a8003e;
+}
+
+.home-page .footer-address a,
+.home-page .footer-complaints {
+  color: #40585c;
+}
+
 .home-page .footer-inner p {
   color: #60777a;
 }
