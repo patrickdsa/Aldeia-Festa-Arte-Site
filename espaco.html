@@ -9,8 +9,13 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="brand-colors.css">
   </head>
-  <body class="space-page">
+  <body class="space-page interior-page">
     <div class="color-bar">
+    </div>
+    <div class="page-balloons" aria-hidden="true">
+      <span class="page-balloon page-balloon-teal page-balloon-one"></span>
+      <span class="page-balloon page-balloon-yellow page-balloon-two"></span>
+      <span class="page-balloon page-balloon-pink page-balloon-three"></span>
     </div>
     <header class="wrap site-header">
       <a class="brand" href="index.html" aria-label="Aldeia Festa e Arte, início">
@@ -65,7 +70,6 @@
         </div>
         <img src="assets/imgs/aldeia2.jpg" alt="Zona de mesas e convívio na Aldeia" loading="lazy">
       </section>
-
       <section class="wrap space-gallery" aria-labelledby="space-gallery-title">
         <div class="space-gallery-heading">
           <div>
@@ -73,6 +77,7 @@
             <h2 id="space-gallery-title">Cada cantinho tem uma história.</h2>
           </div>
         </div>
+        <div class="space-gallery-layout">
         <div class="space-slider" data-slider role="region" aria-label="Fotografias do espaço Aldeia" aria-roledescription="apresentação de fotografias">
           <div class="space-slider-stage">
             <figure class="space-slide is-active" role="group" aria-roledescription="slide" aria-label="1 de 3">
@@ -95,6 +100,13 @@
               <button type="button" data-slider-next aria-label="Fotografia seguinte">→</button>
             </div>
           </div>
+        </div>
+        <aside class="page-mascot" aria-label="Mensagem dos personagens da Aldeia">
+          <figure class="page-mascot-art">
+            <img src="assets/imgs/personagens-aldeia.png" alt="Duas crianças, personagens da Aldeia" loading="lazy">
+          </figure>
+          <p class="page-mascot-speech">Vamos descobrir cada cantinho da Aldeia?</p>
+        </aside>
         </div>
       </section>
     </main>

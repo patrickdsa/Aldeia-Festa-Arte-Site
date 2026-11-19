@@ -13,7 +13,38 @@
   grid-template-columns: .8fr 1.2fr;
   gap: clamp(28px, 7vw, 92px);
   align-items: start;
-  padding: 4px 0 88px;
+  padding: 4px 0 28px;
+}
+
+.contact-side {
+  display: grid;
+  justify-items: center;
+  align-content: start;
+}
+
+.contact-side .page-mascot {
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+  max-width: none;
+  min-height: 0;
+  margin: 0;
+}
+
+.contact-side .page-mascot-speech {
+  align-self: center;
+  max-width: 255px;
+  margin-top: -8px;
+  text-align: center;
+}
+
+.contact-side .page-mascot-speech::before {
+  top: -8px;
+  left: 30px;
+  border: 0;
+  border-top: 1px solid #e8c9a2;
+  border-left: 1px solid #e8c9a2;
+  transform: rotate(45deg);
 }
 
 .contact-note {
@@ -111,11 +142,11 @@
 @media (max-width: 760px) {
   .contact-layout {
     grid-template-columns: 1fr;
-    padding-bottom: 58px;
+    padding-bottom: 24px;
   }
 
   .contact-note {
-    min-height: 210px;
+    min-height: 0;
     padding: 24px;
   }
 

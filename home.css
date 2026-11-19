@@ -1,11 +1,84 @@
 .home-page {
-  background-color: var(--paper);
-  background-image:
-    radial-gradient(ellipse at 8% 10%, rgb(112 191 200 / 22%) 0 8rem, transparent 8.2rem),
-    radial-gradient(ellipse at 91% 20%, rgb(211 0 79 / 10%) 0 10rem, transparent 10.2rem),
-    radial-gradient(ellipse at 78% 58%, rgb(247 178 21 / 20%) 0 8rem, transparent 8.2rem),
-    radial-gradient(ellipse at 12% 84%, rgb(211 0 79 / 8%) 0 10rem, transparent 10.2rem),
-    radial-gradient(ellipse at 96% 96%, rgb(112 191 200 / 20%) 0 9rem, transparent 9.2rem);
+  position: relative;
+  isolation: isolate;
+  background: var(--paper);
+}
+
+.home-page > :not(.home-balloons) {
+  position: relative;
+  z-index: 1;
+}
+
+.home-balloons {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.home-balloons .balloon {
+  position: absolute;
+  display: block;
+  width: clamp(110px, 14vw, 190px);
+  aspect-ratio: 1;
+  border-radius: 48% 52% 45% 55% / 54% 44% 56% 46%;
+  filter: blur(0.5px);
+  opacity: 0.82;
+}
+
+.balloon-teal {
+  background: radial-gradient(circle at 35% 30%, rgb(112 191 200 / 42%), rgb(112 191 200 / 17%) 68%, transparent 72%);
+}
+
+.balloon-pink {
+  background: radial-gradient(circle at 35% 30%, rgb(211 0 79 / 25%), rgb(211 0 79 / 9%) 68%, transparent 72%);
+}
+
+.balloon-yellow {
+  background: radial-gradient(circle at 35% 30%, rgb(247 178 21 / 42%), rgb(247 178 21 / 17%) 68%, transparent 72%);
+}
+
+.balloon-one {
+  top: 7%;
+  left: 13%;
+  width: clamp(95px, 10vw, 140px);
+  border-radius: 53% 47% 58% 42% / 42% 58% 44% 56%;
+}
+
+.balloon-three {
+  top: 48%;
+  right: 3%;
+  width: clamp(100px, 11vw, 150px);
+  border-radius: 43% 57% 47% 53% / 58% 45% 55% 42%;
+}
+
+.balloon-two {
+  top: 23%;
+  right: 17%;
+  width: clamp(68px, 7vw, 96px);
+  border-radius: 57% 43% 52% 48% / 48% 55% 45% 52%;
+}
+
+.balloon-six {
+  top: 37%;
+  left: -24px;
+  width: clamp(76px, 8vw, 112px);
+  border-radius: 42% 58% 54% 46% / 56% 42% 58% 44%;
+}
+
+.balloon-seven {
+  top: 72%;
+  right: 15%;
+  width: clamp(80px, 8vw, 115px);
+  border-radius: 55% 45% 43% 57% / 46% 58% 42% 54%;
+}
+
+.balloon-five {
+  top: 89%;
+  left: 4%;
+  width: clamp(66px, 7vw, 98px);
+  border-radius: 44% 56% 57% 43% / 55% 43% 57% 45%;
 }
 
 .home-page .site-header {
@@ -253,12 +326,65 @@
   content: "";
 }
 
-.home-intro-copy > p:last-child {
+.home-intro-copy > p:not(.home-intro-label) {
   max-width: 470px;
   margin: 19px 0 0;
   color: #60777a;
   font-size: 14px;
   line-height: 1.85;
+}
+
+.home-mascot {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 22px 0 0 -8px;
+}
+
+.home-mascot-art {
+  position: relative;
+  flex: 0 0 205px;
+  width: 205px;
+  height: 190px;
+  margin: 0;
+  overflow: hidden;
+}
+
+.home-mascot-art img {
+  position: absolute;
+  top: -95px;
+  left: -195px;
+  width: 480px;
+  max-width: none;
+  mix-blend-mode: multiply;
+}
+
+.home-mascot-speech {
+  position: relative;
+  max-width: 220px;
+  margin: 0;
+  padding: 14px 17px;
+  border: 1px solid #e8c9a2;
+  border-radius: 18px 18px 18px 5px;
+  background: #fffdf8;
+  box-shadow: 3px 4px 0 rgb(247 178 21 / 55%);
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+.home-mascot-speech::before {
+  position: absolute;
+  top: 50%;
+  left: -8px;
+  width: 14px;
+  height: 14px;
+  border-bottom: 1px solid #e8c9a2;
+  border-left: 1px solid #e8c9a2;
+  background: #fffdf8;
+  content: "";
+  transform: translateY(-50%) rotate(45deg);
 }
 
 .home-page .site-footer {
@@ -369,6 +495,26 @@
 
   .home-intro-copy h2 {
     font-size: clamp(35px, 9vw, 48px);
+  }
+
+  .home-mascot {
+    flex-direction: column;
+    gap: 2px;
+    margin: 20px 0 0;
+  }
+
+  .home-mascot-speech {
+    align-self: flex-end;
+    margin-right: 8px;
+  }
+
+  .home-mascot-speech::before {
+    top: -8px;
+    left: 30px;
+    border: 0;
+    border-top: 1px solid #e8c9a2;
+    border-left: 1px solid #e8c9a2;
+    transform: rotate(45deg);
   }
 }
 
