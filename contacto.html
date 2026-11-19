@@ -10,8 +10,13 @@
     <link rel="stylesheet" href="brand-colors.css">
     <link rel="stylesheet" href="contact.css">
   </head>
-  <body>
+  <body class="interior-page">
     <div class="color-bar"></div>
+    <div class="page-balloons" aria-hidden="true">
+      <span class="page-balloon page-balloon-teal page-balloon-one"></span>
+      <span class="page-balloon page-balloon-yellow page-balloon-two"></span>
+      <span class="page-balloon page-balloon-pink page-balloon-three"></span>
+    </div>
     <header class="wrap site-header">
       <a class="brand" href="index.html" aria-label="Aldeia Festa e Arte, início">
         <span class="brand-mark">A</span>
@@ -31,12 +36,19 @@
         <h1>Entre em contacto.</h1>
         <p>Deixe-nos os dados e diga-nos quando gostaria de celebrar. Entraremos em contacto para confirmar a disponibilidade.</p>
       </section>
-
       <section class="wrap contact-layout" aria-label="Pedido de reserva">
+        <div class="contact-side">
         <div class="contact-note">
           <span class="contact-scribble" aria-hidden="true">✳</span>
           <p>Já tem uma data em mente?<br><strong>Conte-nos.</strong></p>
           <small>Aldeia Festa e Arte · Coimbra</small>
+        </div>
+        <aside class="page-mascot contact-mascot" aria-label="Mensagem dos personagens da Aldeia">
+          <figure class="page-mascot-art">
+            <img src="assets/imgs/personagens-aldeia.png" alt="Duas crianças, personagens da Aldeia" loading="lazy">
+          </figure>
+          <p class="page-mascot-speech">Estamos à sua espera para celebrar!</p>
+        </aside>
         </div>
 
         <form class="contact-form" id="booking-form">
