@@ -24,10 +24,52 @@ if (bookingForm) {
   // Configure este endereço com o email de reservas da Aldeia.
   const contactEmail = "aldeia.coimbra@gmail.com";
   const dateInput = bookingForm.querySelector('[name="data"]');
+  const phonePrefixInput = bookingForm.querySelector('[name="indicativo"]');
+  const phoneInput = bookingForm.querySelector('[name="telefone"]');
+  const snackOptions = Array.from(bookingForm.querySelectorAll('[name="lanche"]'));
+  const noSnackOption = bookingForm.querySelector('[name="lanche"][value="Não pretendo contratar lanche"]');
   const status = document.querySelector("#form-status");
+
+  function validateSnackSelection() {
+    const hasSelection = snackOptions.some((option) => option.checked);
+
+    if (snackOptions[0]) {
+      snackOptions[0].setCustomValidity(
+        hasSelection ? "" : "Selecione um tipo de lanche ou indique que não pretende contratar este serviço.",
+      );
+    }
+  }
+
+  snackOptions.forEach((option) => {
+    option.addEventListener("change", () => {
+      if (option === noSnackOption && option.checked) {
+        snackOptions.forEach((snack) => {
+          if (snack !== noSnackOption) snack.checked = false;
+        });
+      } else if (option.checked && noSnackOption) {
+        noSnackOption.checked = false;
+      }
+
+      validateSnackSelection();
+    });
+  });
+
+  validateSnackSelection();
 
   if (dateInput) {
     dateInput.min = new Date().toISOString().slice(0, 10);
+  }
+
+  if (phoneInput) {
+    phoneInput.addEventListener("input", () => {
+      phoneInput.value = phoneInput.value.replace(/\D/g, "").slice(0, 15);
+    });
+  }
+
+  if (phonePrefixInput) {
+    phonePrefixInput.addEventListener("input", () => {
+      phonePrefixInput.value = phonePrefixInput.value.replace(/\D/g, "").slice(0, 4);
+    });
   }
 
   bookingForm.addEventListener("submit", (event) => {
@@ -44,10 +86,15 @@ if (bookingForm) {
     const body = [
       "Olá, gostaria de saber a disponibilidade para a minha festa.",
       "",
-      `Data que pretende reservar: ${date}`,
       `Nome: ${fields.get("nome")}`,
+      `Contacto telefónico: +${fields.get("indicativo")} ${fields.get("telefone")}`,
+      `Nome do aniversariante: ${fields.get("aniversariante")}`,
+      `Data que pretende reservar: ${date}`,
       `Horário: ${fields.get("horario")}`,
-      `Contacto telefónico: ${fields.get("telefone")}`,
+      `Tipo de festa: ${fields.get("tipo_festa")}`,
+      `Lanche: ${fields.getAll("lanche").join(", ") || "Não indicado"}`,
+      `Decoração: ${fields.get("decoracao")}`,
+      `Extras: ${fields.get("extras") || "Nenhum"}`,
     ].join("\n");
 
     window.location.href = `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
