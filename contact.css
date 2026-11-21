@@ -352,3 +352,11 @@
     font-size: 12px;
   }
 }
+
+@media (max-width: 760px) {
+  .contact-scribble,
+  .contact-submit-icon,
+  .form-confirm-link-icon {
+    display: none;
+  }
+}
