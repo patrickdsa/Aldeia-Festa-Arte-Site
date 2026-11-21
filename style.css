@@ -1305,12 +1305,25 @@ main
   .footer-inner
   {
     gap: 11px;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .footer-address
+  {
+    justify-items: center;
   }
 
   .footer-home
   {
+    justify-self: center;
     min-height: 40px;
     padding: 8px 12px;
+  }
+
+  .footer-complaints
+  {
+    justify-self: center;
   }
 }
 

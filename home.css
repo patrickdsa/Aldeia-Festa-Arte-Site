@@ -501,6 +501,10 @@
     font-size: 15px;
   }
 
+  .home-scroll span {
+    display: none;
+  }
+
   .home-introduction {
     padding-top: 22px;
     padding-bottom: 70px;
