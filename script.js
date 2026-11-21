@@ -26,7 +26,35 @@ if (bookingForm) {
   const dateInput = bookingForm.querySelector('[name="data"]');
   const phonePrefixInput = bookingForm.querySelector('[name="indicativo"]');
   const phoneInput = bookingForm.querySelector('[name="telefone"]');
+  const snackOptions = Array.from(bookingForm.querySelectorAll('[name="lanche"]'));
+  const noSnackOption = bookingForm.querySelector('[name="lanche"][value="Não pretendo contratar lanche"]');
   const status = document.querySelector("#form-status");
+
+  function validateSnackSelection() {
+    const hasSelection = snackOptions.some((option) => option.checked);
+
+    if (snackOptions[0]) {
+      snackOptions[0].setCustomValidity(
+        hasSelection ? "" : "Selecione um tipo de lanche ou indique que não pretende contratar este serviço.",
+      );
+    }
+  }
+
+  snackOptions.forEach((option) => {
+    option.addEventListener("change", () => {
+      if (option === noSnackOption && option.checked) {
+        snackOptions.forEach((snack) => {
+          if (snack !== noSnackOption) snack.checked = false;
+        });
+      } else if (option.checked && noSnackOption) {
+        noSnackOption.checked = false;
+      }
+
+      validateSnackSelection();
+    });
+  });
+
+  validateSnackSelection();
 
   if (dateInput) {
     dateInput.min = new Date().toISOString().slice(0, 10);

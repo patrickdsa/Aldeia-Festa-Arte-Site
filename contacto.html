@@ -24,6 +24,7 @@
       </a>
       <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNav">☰</button>
       <nav class="nav" id="mainNav" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
         <a href="espaco.html">O espaço</a>
         <a href="como-funciona.html">Como funciona</a>
         <a href="contacto.html" aria-current="page">Entre em contacto</a>
@@ -52,6 +53,7 @@
         </div>
 
         <form class="contact-form" id="booking-form">
+          <p class="form-help">Todos os campos são de preenchimento obrigatório. Para os serviços opcionais, selecione a opção de não contratação quando aplicável.</p>
           <div class="form-field">
             <label for="booking-name">Nome</label>
             <input id="booking-name" name="nome" type="text" autocomplete="name" placeholder="Como se chama?" required>
@@ -100,10 +102,12 @@
             </select>
           </div>
           <fieldset class="form-field snack-options">
-            <legend>Lanche <span>(pode selecionar mais do que uma opção)</span></legend>
+            <legend>Lanche <span>(selecione pelo menos uma opção)</span></legend>
+            <small class="form-field-hint" id="snack-hint">Pode selecionar mais do que um tipo de lanche ou indicar que não pretende contratar este serviço.</small>
             <label class="snack-choice"><input type="checkbox" name="lanche" value="Lanche Infantil"> Lanche Infantil</label>
             <label class="snack-choice"><input type="checkbox" name="lanche" value="Lanche Teen"> Lanche Teen</label>
             <label class="snack-choice"><input type="checkbox" name="lanche" value="Cocktail Adulto"> Cocktail Adulto</label>
+            <label class="snack-choice"><input type="checkbox" name="lanche" value="Não pretendo contratar lanche"> Não pretendo contratar lanche</label>
           </fieldset>
           <div class="form-field">
             <label for="party-decoration">Decoração</label>
@@ -111,11 +115,12 @@
               <option value="" selected disabled>Selecione uma opção</option>
               <option value="Simples">Simples</option>
               <option value="Completa">Completa</option>
+              <option value="Não pretendo contratar decoração">Não pretendo contratar decoração</option>
             </select>
           </div>
           <div class="form-field">
             <label for="booking-extras">Extras</label>
-            <textarea id="booking-extras" name="extras" rows="4" placeholder="Conte-nos que extras gostaria de incluir"></textarea>
+            <textarea id="booking-extras" name="extras" rows="4" placeholder="Indique os extras pretendidos ou escreva: Não pretendo contratar extras." required></textarea>
           </div>
           <div class="form-confirm-card">
             <input id="confirm-rules" type="checkbox" name="confirmacao_regras" value="Confirmado" required>
@@ -124,7 +129,7 @@
             <span>antes de enviar o pedido.</span>
           </div>
           <button class="contact-submit" type="submit">Enviar pedido <span aria-hidden="true">↗</span></button>
-          <p class="form-help" id="form-status" aria-live="polite">Ao enviar, será aberta a sua aplicação de email com o pedido preenchido.</p>
+          <p class="form-help" id="form-status" aria-live="polite">Ao submeter o formulário, será aberta uma mensagem no programa de correio eletrónico do seu dispositivo. Confirme o envio da mensagem para concluir o pedido.</p>
         </form>
       </section>
     </main>
@@ -134,6 +139,7 @@
         <div class="footer-brand">Aldeia Festa e Arte</div>
         <address class="footer-address"><span class="footer-address-label">Visite-nos</span><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0xd22f97081789255:0xbe19085c9d4c660f?sa=X&amp;ved=1t:8290&amp;ictx=111" target="_blank" rel="noopener">Av. Elísio de Moura 357, loja 4<br>3030-183 Coimbra</a></address>
         <a class="footer-home" href="index.html">Voltar ao início</a>
+        <a class="footer-complaints" href="privacidade.html">Privacidade e dados</a>
         <a class="footer-complaints" href="https://www.livroreclamacoes.pt/Inicio/" target="_blank" rel="noopener">Livro de Reclamações</a>
       </div>
     </footer>
