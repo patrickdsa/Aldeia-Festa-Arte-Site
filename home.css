@@ -390,9 +390,10 @@
 .home-page .site-footer {
   position: relative;
   overflow: hidden;
-  border: 0;
-  background: transparent;
+  border-top: 1px solid #e8c9a2;
+  background: var(--cream);
   color: var(--ink);
+  padding: 20px 0;
 }
 
 .home-page .footer-brand {
@@ -416,19 +417,40 @@
   color: #60777a;
 }
 
+.home-page .footer-home {
+  border-color: #237d87;
+  background: #fffaf2;
+  color: #237d87;
+}
+
+.home-page .footer-complaints {
+  opacity: 1;
+}
+
 @media (max-width: 760px) {
+  .home-page .site-footer {
+    padding: 18px 0;
+  }
+
   .home-page .site-header {
-    height: 76px;
+    height: auto;
+    min-height: 76px;
+    flex-wrap: wrap;
+    gap: 0 12px;
   }
 
   .home-page .nav {
-    top: 76px;
+    position: static;
+    inset: auto;
+    flex: 0 0 100%;
+    width: 100%;
+    margin: 0 0 12px;
     gap: 0;
-    padding: 12px 18px;
+    padding: 8px 14px;
     border: 1px solid #e9dfcf;
     border-radius: 12px;
     background: #fffdf8;
-    box-shadow: 0 14px 30px rgb(23 52 59 / 12%);
+    box-shadow: 0 8px 18px rgb(23 52 59 / 8%);
     transform: none;
   }
 

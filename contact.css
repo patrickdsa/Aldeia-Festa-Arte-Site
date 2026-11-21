@@ -312,3 +312,43 @@
     margin: 18px 0 28px;
   }
 }
+
+@media (max-width: 420px) {
+  .contact-hero h1 {
+    font-size: clamp(40px, 11vw, 54px);
+  }
+
+  .contact-note {
+    padding: 20px;
+    border-top-right-radius: 58px;
+  }
+
+  .contact-note p {
+    font-size: 25px;
+  }
+
+  .phone-input-group {
+    grid-template-columns: 96px minmax(0, 1fr);
+    gap: 7px;
+  }
+
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    min-width: 0;
+    padding-right: 11px;
+    padding-left: 11px;
+    font-size: 16px;
+  }
+
+  .snack-options legend span {
+    display: block;
+    margin-top: 4px;
+  }
+
+  .form-confirm-card {
+    gap: 9px;
+    padding: 14px;
+    font-size: 12px;
+  }
+}
