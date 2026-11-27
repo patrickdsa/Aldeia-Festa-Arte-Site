@@ -131,41 +131,71 @@ a
 {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 12px;
 }
 
 .nav a
 {
   position: relative;
+  z-index: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-height: 36px;
-  padding: 4px 0;
+  padding: 4px 8px;
+  border-radius: 999px;
   text-decoration: none;
   font-size: 13px;
   font-weight: 700;
   color: #38585f;
-  transition: color .2s;
+  transition: color .25s ease, transform .3s cubic-bezier(.2,.75,.25,1);
+}
+
+.nav a::before,
+.nav a::after
+{
+  position: absolute;
+  content: "";
+  pointer-events: none;
+}
+
+.nav a::before
+{
+  z-index: -1;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg, #e7f4f2, #fff1f5);
+  opacity: 0;
+  transform: scale(.82);
+  transition: opacity .25s ease, transform .35s cubic-bezier(.2,.75,.25,1);
 }
 
 .nav a::after
 {
-  position: absolute;
-  right: 0;
-  bottom: 2px;
-  left: 0;
-  height: 1px;
+  right: 14px;
+  bottom: 5px;
+  left: 14px;
+  height: 2px;
+  border-radius: 999px;
   background: var(--pink);
-  content: "";
   transform: scaleX(0);
-  transform-origin: left;
-  transition: transform .2s ease;
+  transform-origin: center;
+  transition: transform .3s cubic-bezier(.2,.75,.25,1);
 }
 
-.nav a:hover
+.nav a:hover,
+.nav a:focus-visible
 {
   color: var(--pink);
+  transform: translateY(-2px);
+}
+
+.nav a:hover::before,
+.nav a:focus-visible::before,
+.nav a[aria-current=page]::before
+{
+  opacity: 1;
+  transform: scale(1);
 }
 
 .nav a:hover::after,
